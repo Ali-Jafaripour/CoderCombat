@@ -1,3 +1,27 @@
+
+
+@font-face {
+  font-family: Potk;
+  src: url(./Font/Potk\ Font.ttf);
+}
+@font-face {
+  font-family: colak;
+  src: url(./Font/Colak.ttf);
+}
+
+@font-face {
+  font-family: pinar-bold;
+  src: url(./Font/pinar/Pinar-Bold.ttf);
+}
+
+@font-face {
+  font-family: pinar-medium;
+  src: url(./Font/pinar/Pinar-DS1-Medium.ttf);
+}
+@font-face {
+  font-family: pinar-regular;
+  src: url(./Font/pinar/Pinar-DS1-Regular.ttf);
+} 
 /* استایل‌های عمومی برای بدنه */
 
 
@@ -9,68 +33,112 @@ body {
   background-color: #070510;
   color: #fff;
   direction: rtl;
-  overflow-x: hidden; /* جلوگیری از اسکرول افقی */
+  overflow-x: hidden;
+  position: relative;
+}
+:root{
+  scroll-behavior: smooth;
+
 }
 
 /* استایل‌های نوبار (Navbar) */
+/* Base styles for the navbar */
 .navbar {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between; /* Space between logo and links */
   align-items: center;
   padding: 20px 50px;
-  position: absolute;
-  top: 0;
-  width: 100%;
   z-index: 10;
-  opacity: 0;
-  animation: fadeIn 2s ease-out forwards;
 }
 
-
-.navbar a {
-  font-family: 'pinar-medium';
-  display: inline;
-  color: white;
-  margin: 0 4%;
-  white-space: nowrap; /* جلوگیری از شکست خط */
-  text-decoration: none;
-  font-size: 14px;
-  transition: color 0.3s ease;
+/* Styling for the logo */
+.nav-logo {
+  flex-shrink: 0; /* Prevent the logo from shrinking */
 }
 
-.navbar a:hover {
-  color: #ff8800;
-}
-
-.navlogo{
-  max-width: 100%; 
+.nav-logo img.navlogo {
+  max-width: 100%;
   height: auto;
-  max-height: 80px;
+  max-height: 80px; /* Adjust maximum height */
 }
 
-.navbar a.navLogoA{
-  margin-right: 17%;
+/* Styles for the navigation links */
+.nav-links {
+  list-style: none; /* Remove default list styling */
+  display: flex; /* Display links in a horizontal line */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
 }
 
-.navbar a.btn-register {
-  background-color: #0066cc;
-  padding: 10px 20px;
-  border-radius: 15px;
-  transition: transform 0.9s ease, background-color 0.9s ease;
+.nav-links li {
+  margin: 0 20px; /* Space between links */
 }
 
-.navbar a.btn-register:hover {
-  background-color: #ffffff;
-  color: #0b0b2a;
-  transform: scale(1.1);
+.nav-links a {
+  font-family: 'pinar-medium', sans-serif; /* Specify font */
+  color: white; /* Link color */
+  text-decoration: none; /* Remove underline */
+  font-size: 14px; /* Font size */
+  transition: color 0.3s ease; /* Transition for hover effect */
 }
 
+.nav-links a:hover {
+  color: #ff8800; /* Change color on hover */
+}
 
+/* Styles for the registration button */
+.btn-register {
+  background-color: #0066cc; /* Button background color */
+  padding: 10px 20px; /* Padding */
+  border-radius: 15px; /* Rounded corners */
+  transition: transform 0.9s ease, background-color 0.9s ease; /* Transition effects */
+}
 
+.btn-register:hover {
+  background-color: #ffffff; /* Change background on hover */
+  color: #0b0b2a; /* Change text color on hover */
+  transform: scale(1.1); /* Scale effect on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px; /* Less padding on smaller screens */
+  }
+
+  .nav-links {
+    flex-direction: row; /* Stack links vertically */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .nav-links li {
+    margin: 5px 5px; /* Adjust vertical spacing between links */
+  }
+
+  .nav-logo img.navlogo {
+    max-height: 60px; /* Smaller logo on mobile */
+  }
+
+  .nav-links a {
+    font-size: 12px; /* Smaller font size on mobile */
+  }
+
+  .btn-register {
+    padding: 8px 15px; /* Adjust button padding for smaller screens */
+    font-size: 12px; /* Smaller font size for button */
+  }
+}
+
+@media (max-width: 576px) {
+  .nav-links a {
+    font-size: 10px; /* Further reduce font size */
+  }
+}
 /*------------------------- استایل‌های بخش بنر -------------------------*/
 
 
 .banner {
+  display: inline;
   height: 80vh;
   display: flex;
   align-content: center;
@@ -79,8 +147,7 @@ body {
   flex-direction: row-reverse;
   text-align: center;
   position: relative;
-  opacity: 0;
-  animation: fadeIn 2.5s ease-out forwards;
+  /* animation: fadeIn 2.5s ease-out forwards; */
  
 }
 
@@ -93,9 +160,7 @@ body {
   margin-left: 90px;
   text-transform: uppercase;
   letter-spacing: 5px;
-  transform: translateY(-20px);
-  opacity: 0;
-  animation: slideInDown 1s ease-out forwards 0.5s;
+  /* animation: slideInDown 1s ease-out forwards 0.5s; */
 }
 
 .banner p {
@@ -105,16 +170,17 @@ body {
   margin-top: 0;
   margin-bottom: 10px;
   color: #b0b0b0;
-  transform: translateY(20px);
-  opacity: 0;
-  animation: slideInUp 1s ease-out forwards 1s;
+  /* transform: translateY(20px); */
+  opacity: 1;
+  z-index: 10;
+  /* animation: slideInUp 1s ease-out forwards 1s; */
 }
 
 .banner img {
   max-width: 100%; 
   height: auto;
   position: absolute;
-  top: 0;
+  top: 10px;
   right: 0;
   z-index: -1;
   opacity: 0.6;
@@ -124,6 +190,7 @@ body {
   display: flex;
   flex-direction: column;
   margin-bottom: 100px;
+  z-index: 10;
 }
 
 .hero-section .logo-container{
@@ -156,16 +223,14 @@ body {
   flex-direction: column;
   margin-top: 20%;
   padding: 30px 0;
-  opacity: 0;
-  animation: fadeIn 2s ease-out forwards 2.5s;
+  opacity: 1;
   
 }
 
 .section div {
-  opacity: 0;
+  opacity: 1;
   width: 100%;
-  transform: translateY(30px);
-  animation: slideInUp 1s ease-out forwards 2s;
+  /* transform: translateY(30px); */
 }
 
 .section div img {
@@ -240,7 +305,7 @@ width: 35%;
   display: flex;
   justify-content: center;  padding: 50px 20px;
   opacity: 1;
-  animation: fadeIn 2s ease-out forwards 3s;
+  /* animation: fadeIn 2s ease-out forwards 3s; */
 }
 
 .features .feature {
@@ -256,7 +321,7 @@ width: 35%;
   text-align: left;
   width: 300px;
   height: auto;
-  animation: slideInUp 1s;
+  /* animation: slideInUp 1s; */
   transition: all 0.7s;
   overflow: hidden; 
   padding: 20px;
@@ -342,7 +407,7 @@ width: 50%;
   color: white;
   padding: 40px 0;
   text-align: center;
-  animation: fadeIn 2s ease-out forwards 4s;
+  /* animation: fadeIn 2s ease-out forwards 4s; */
 
 }
 
@@ -405,70 +470,4 @@ flex-direction: column;
 }
 
 
-/* استایل‌های SVG */
-.hidden-svg {
-  opacity: 0;
-  transform: translateY(100px); /* شروع از پایین */
-  transition: opacity 1s ease-out, transform 1s ease-out;
-}
 
-.visible-svg {
-  opacity: 1;
-  transform: translateY(0); /* انیمیشن برای آمدن به جایگاه اصلی */
-}
-
-/* انیمیشن‌ها */
-@keyframes fadeIn {
-  from {
-      opacity: 0;
-  }
-  to {
-      opacity: 1;
-  }
-}
-
-@keyframes slideInUp {
-  from {
-      opacity: 0;
-      transform: translateY(30px);
-  }
-  to {
-      opacity: 1;
-      transform: translateY(0);
-  }
-}
-
-@keyframes slideInDown {
-  from {
-      opacity: 0;
-      transform: translateY(-30px);
-  }
-  to {
-      opacity: 1;
-      transform: translateY(0);
-  }
-}
-
-
-@font-face {
-  font-family: Potk;
-  src: url(./Font/Potk\ Font.ttf);
-}
-@font-face {
-  font-family: colak;
-  src: url(./Font/Colak.ttf);
-}
-
-@font-face {
-  font-family: pinar-bold;
-  src: url(./Font/pinar/Pinar-Bold.ttf);
-}
-
-@font-face {
-  font-family: pinar-medium;
-  src: url(./Font/pinar/Pinar-DS1-Medium.ttf);
-}
-@font-face {
-  font-family: pinar-regular;
-  src: url(./Font/pinar/Pinar-DS1-Regular.ttf);
-}

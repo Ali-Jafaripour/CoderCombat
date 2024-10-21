@@ -1,22 +1,3 @@
- // Intersection Observer for SVGs
- const svgs = document.querySelectorAll('.hidden-svg');
-
- const observerOptions = {
-     threshold: 0.1
- };
-
- const observer = new IntersectionObserver((entries, observer) => {
-     entries.forEach(entry => {
-         if (entry.isIntersecting) {
-             entry.target.classList.add('visible-svg');
-             observer.unobserve(entry.target); // پس از ظاهر شدن، نظارت را متوقف می‌کند
-         }
-     });
- }, observerOptions);
-
- svgs.forEach(svg => {
-     observer.observe(svg);
- });
 
 
 

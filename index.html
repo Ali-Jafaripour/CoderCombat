@@ -6,12 +6,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Coder Combat</title>
-  <script src="./Action.js"></script>
   <link rel="stylesheet" href="./Style.css">
-  <!-- <link rel="stylesheet" href="lib/animate.min.css"> -->
-  <!-- <script src="lib/wow.min.js"></script> -->
+  <link rel="stylesheet" href="lib/animate.min.css">
+  <script src="lib/wow.min.js"></script>
   <script>
-    // new WOW().init();
+    new WOW().init();
   </script>
 
 
@@ -19,24 +18,28 @@
 
 <body>
   <!-- Navbar -->
-  <div class="navbar">
-    <a href="https://evand.com/events/codercombat" class="btn-register">ثبت نام رویداد</a>
-    <a href="#">صفحه نخست</a>
-    <a href="#">جوایز</a>
-    <a href="#">قوانین ثبت نام</a>
-    <a href="#"></a>
-    <a href="#" class="navLogoA"><img src="./asset/logo.png" alt="Logo" class="navlogo"></a>
-
-  </div>
+  <nav class="navbar">
+    <ul class="nav-links">
+        <li><a href="https://evand.com/events/codercombat" class="btn-register">ثبت نام رویداد</a></li>
+        <li><a href="#">صفحه نخست</a></li>
+        <li><a href="#chart-one">جوایز</a></li>
+        <li><a href="#chart-two">قوانین ثبت نام</a></li>
+    </ul>
+    <div class="nav-logo">
+        <a href="#" class="navLogoA">
+            <img src="./asset/logo.png" alt="Logo" class="navlogo">
+        </a>
+    </div>
+</nav>
 
   <!-- Banner Section -->
   <div class="banner">
     <img src="./asset/Hero2.png" alt="Banner" class="banner-img">
     <div class="hero-section">
-      <h1>Coder Combat</h1>
-      <p>نبرد کدها،مسابقه ای متفاوت در سطح کشوری</p>
+      <h1 class="wow animate__animated animate__fadeInDown">Coder Combat</h1>
+      <p class="wow animate__animated animate__fadeInUp">نبرد کدها،مسابقه ای متفاوت در سطح کشوری</p>
 
-      <p>مهلت ثبت نام : 23 مهر - 1 آبان</p>
+      <p class="wow animate__animated animate__fadeInUp">مهلت ثبت نام : 23 مهر - 1 آبان</p>
       <div class="logo-container">
         <img src="./asset/Sponser/isti-small.png" alt="Logo" class="one">
         <img src="./asset/Sponser/rayan.png" alt="Logo" class="two">
@@ -48,10 +51,10 @@
   </div>
 
   <!-- Main Content -->
-  <div class="section">
+  <div class="section ">
     <div id="chart-one">
-      <img src="./asset/passion.png" alt="چارت">
-      <div class="text-container">
+      <img src="./asset/passion.png" class="wow animate__animated animate__fadeInUp" alt="چارت">
+      <div class="text-container wow animate__animated animate__fadeInUp">
         <h1>جوایز</h1>
         <p>تیم اول ۱۵ میلیون تومان + سهمیه حضور در مرحله نهایی مسابقه بین المللی برنامه سازی رایان</p>
         <p>تیم دوم ۱۰ میلیون تومان</p>
@@ -62,9 +65,9 @@
     </div>
     <div id="chart-two">
 
-      <img src="./asset/jobs.png" alt="فرم">
+      <img src="./asset/jobs.png" alt="فرم" class="wow animate__animated animate__fadeInUp">
 
-      <div class="text-container">
+      <div class="text-container wow animate__animated animate__fadeInUp">
         <h1>قوانین ثبت نام:</h1>
         <p>ثبت نام برای کلیه دانشجویان و فارغ التحصیلانی که نیمسال تحصیلی دوم سال تحصیلی 1402-1403 فارغ التحصیل شدند
           آزاد میباشد.</p>
@@ -80,19 +83,18 @@
 
 
   <!-- time line -->
-  <div class="Timeline-container wow bounceInUp">
-    <img src="./asset/1.png" alt="day1" class="day-one">
-    <img src="./asset/2.png" alt="day2" class="day-two">
+  <div class="Timeline-container" data-wow-duration="2s">
+    <img src="asset/timeline/line.svg" alt="" class="t">
   </div>
 
   <!-- SVGs Section -->
-  <div class="svg-container">
+  <!-- <div class="svg-container">
     <img class="hidden-svg" src="" alt="">
-  </div>
+  </div> -->
 
 
   <!-- Features Section -->
-  <div class="features wow bounceInUp">
+  <div class="features wow animate__animated animate__fadeInUp">
     <div class="feature one">
       <img src="./asset/finance.png" alt="ویژگی ۱">
       <h2>قوانین</h2>
