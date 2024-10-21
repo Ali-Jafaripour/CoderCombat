@@ -1,0 +1,474 @@
+/* استایل‌های عمومی برای بدنه */
+
+
+
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #070510;
+  color: #fff;
+  direction: rtl;
+  overflow-x: hidden; /* جلوگیری از اسکرول افقی */
+}
+
+/* استایل‌های نوبار (Navbar) */
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 50px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards;
+}
+
+
+.navbar a {
+  font-family: 'pinar-medium';
+  display: inline;
+  color: white;
+  margin: 0 4%;
+  white-space: nowrap; /* جلوگیری از شکست خط */
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #ff8800;
+}
+
+.navlogo{
+  max-width: 100%; 
+  height: auto;
+  max-height: 80px;
+}
+
+.navbar a.navLogoA{
+  margin-right: 17%;
+}
+
+.navbar a.btn-register {
+  background-color: #0066cc;
+  padding: 10px 20px;
+  border-radius: 15px;
+  transition: transform 0.9s ease, background-color 0.9s ease;
+}
+
+.navbar a.btn-register:hover {
+  background-color: #ffffff;
+  color: #0b0b2a;
+  transform: scale(1.1);
+}
+
+
+
+/*------------------------- استایل‌های بخش بنر -------------------------*/
+
+
+.banner {
+  height: 80vh;
+  display: flex;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row-reverse;
+  text-align: center;
+  position: relative;
+  opacity: 0;
+  animation: fadeIn 2.5s ease-out forwards;
+ 
+}
+
+.banner h1 {
+  font-family: 'potk';
+  font-size: 65px;
+  margin-top: 230px;
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-left: 90px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  transform: translateY(-20px);
+  opacity: 0;
+  animation: slideInDown 1s ease-out forwards 0.5s;
+}
+
+.banner p {
+  font-family: 'pinar-bold';
+  margin-left: 70px;
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #b0b0b0;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: slideInUp 1s ease-out forwards 1s;
+}
+
+.banner img {
+  max-width: 100%; 
+  height: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+.hero-section{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+
+.hero-section .logo-container{
+  margin-left: 10%;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height:60px; 
+  top: 200px;
+  position: relative;
+}
+.logo-container img{
+  margin: 0 10px;
+  position: relative;
+  max-width: 100%; 
+  height: auto;
+  max-height: 80px;
+  gap: 20px;
+}
+
+
+
+
+/*---------------- استایل‌های سکشن (Section)------------------------ */
+
+
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 20%;
+  padding: 30px 0;
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards 2.5s;
+  
+}
+
+.section div {
+  opacity: 0;
+  width: 100%;
+  transform: translateY(30px);
+  animation: slideInUp 1s ease-out forwards 2s;
+}
+
+.section div img {
+  width: 30%;
+  height: auto;
+  transition: transform 0.9s ease;
+}
+
+.section div img:hover {
+  transform: scale(1.05);
+}
+
+.section h1{
+  font-family: 'potk';
+  font-size: 35px;
+  margin-right: 45%;
+
+}
+
+.section p {
+  font-family: 'pinar-bold';
+  margin-right: 20%;
+  margin-top: 20px;
+  line-height: 1.6;
+  font-size: 14px;
+  color: #c8c8c8;
+}
+
+#chart-one{
+  margin-top: 20px;
+  margin-bottom: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-content: space-around;
+}
+
+#chart-one img {
+  margin-left: 10%;
+}
+
+#chart-two{
+  
+  display: flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+#chart-two p{
+  margin-left: 15%;
+}
+
+#chart-two img{
+margin-right: 10%;
+width: 35%;
+}
+
+.text-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 80px;
+}
+
+
+/*--------------------------------- استایل‌های ویژگی‌ها (Features) ---------------------------*/
+
+.features {
+  display: flex;
+  justify-content: center;  padding: 50px 20px;
+  opacity: 1;
+  animation: fadeIn 2s ease-out forwards 3s;
+}
+
+.features .feature {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(52, 0, 76, 0.425);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.8px);
+  border: 1px solid rgba(230, 167, 240, 0.35);
+  text-align: left;
+  width: 300px;
+  height: auto;
+  animation: slideInUp 1s;
+  transition: all 0.7s;
+  overflow: hidden; 
+  padding: 20px;
+  margin:10px 55px;
+}
+.features .feature h2{
+  font-family: 'potk';
+  margin: 0;
+}
+
+.features .feature-text {
+  font-family: 'pinar-regular';
+  text-align: right;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #b0b0b0;
+  margin-top: 5px;
+  padding: 9px 0;
+  max-height: 6em; /* حداکثر ارتفاع متن */
+  overflow: hidden;
+  transition: max-height 0.5s ease; 
+}
+
+/* هنگام هاور کردن و کلیک */
+.features .feature:hover {
+  background: rgba(221, 0, 255, 0.082);
+  box-shadow: 0 4px 30px rgba(85, 47, 83, 0.474);
+  transform: scale(1.02);
+}
+
+
+.show-more {
+  font-family: 'pinar-bold';
+  background-color: transparent;
+  background-color: #c382ee3a;
+  border-radius: 5px;
+  padding: 2px 8px;
+  color: #b0b0b0;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  text-decoration: none;
+  margin-top: 5px;
+}
+
+
+.features .feature img {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.5s ease;
+}
+
+.features .feature img:hover {
+  transform: scale(1.1);
+}
+
+/*-------------------- Time line   ----------------------- */
+
+.Timeline-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.day-one{ 
+  margin-top: 50px;
+  margin-right: 350px;
+  width: 60%;
+  height: auto;
+  opacity: 0.8;
+}
+.day-two{
+  z-index: -1;
+margin-left: 400px;
+width: 50%;
+  height: auto;
+  opacity: 0.8;
+}
+
+/*-------------- استایل‌های فوتِر (Footer)----------------------- */
+
+.footer {
+  background-color: #4b0082;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+  animation: fadeIn 2s ease-out forwards 4s;
+
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-media a {
+  margin: 0 10px;
+}
+
+.social-media img {
+  width: 30px;
+  height: 30px;
+}
+
+.footer-menu {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.footer-menu .column {
+  display: flex;
+flex-direction: column;
+  margin: 0 20px;
+}
+
+.footer-menu h4 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+.footer-menu ul {
+  list-style: none;
+}
+
+.footer-menu ul li {
+  margin-bottom: 10px;
+}
+
+.footer-menu ul li a {
+  color: #B5B5B5;
+  text-decoration: none;
+}
+
+.footer-menu ul li a:hover {
+  color: #FFFFFF;
+}
+
+.copyright {
+  font-size: 14px;
+  color: #B5B5B5;
+  margin-top: 20px;
+}
+
+
+/* استایل‌های SVG */
+.hidden-svg {
+  opacity: 0;
+  transform: translateY(100px); /* شروع از پایین */
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.visible-svg {
+  opacity: 1;
+  transform: translateY(0); /* انیمیشن برای آمدن به جایگاه اصلی */
+}
+
+/* انیمیشن‌ها */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+      opacity: 0;
+      transform: translateY(-30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+@font-face {
+  font-family: Potk;
+  src: url(./Font/Potk\ Font.ttf);
+}
+@font-face {
+  font-family: colak;
+  src: url(./Font/Colak.ttf);
+}
+
+@font-face {
+  font-family: pinar-bold;
+  src: url(./Font/pinar/Pinar-Bold.ttf);
+}
+
+@font-face {
+  font-family: pinar-medium;
+  src: url(./Font/pinar/Pinar-DS1-Medium.ttf);
+}
+@font-face {
+  font-family: pinar-regular;
+  src: url(./Font/pinar/Pinar-DS1-Regular.ttf);
+}
