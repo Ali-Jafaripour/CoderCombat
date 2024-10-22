@@ -293,8 +293,12 @@ body {
   #chart-two {
     flex-direction: column !important;
   }
-  #chart-one .text-container,
-  #chart-two .text-container {
+  .text-container {
+    margin: 0 !important;
+  }
+  p {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
   #chart-one img,
   #chart-two img {
@@ -312,6 +316,9 @@ body {
   #chart-one .text-container,
   #chart-two .text-container {
     text-align: center;
+  }
+  .Timeline-container img {
+    width: 400px;
   }
 }
 
