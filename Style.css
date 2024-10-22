@@ -18,6 +18,8 @@
   font-family: pinar-medium;
   src: url(./Font/pinar/Pinar-DS1-Medium.ttf);
 }
+
+
 @font-face {
   font-family: pinar-regular;
   src: url(./Font/pinar/Pinar-DS1-Regular.ttf);
@@ -152,9 +154,10 @@ body {
 }
 
 .banner h1 {
+  align-self: flex-end;
   font-family: 'potk';
   font-size: 65px;
-  margin-top: 230px;
+  /* margin-top: 230px; */
   font-weight: bold;
   margin-bottom: 0;
   margin-left: 90px;
@@ -164,8 +167,9 @@ body {
 }
 
 .banner p {
+  align-self: flex-end;
   font-family: 'pinar-bold';
-  margin-left: 70px;
+  margin-left: 90px;
   font-size: 20px;
   margin-top: 0;
   margin-bottom: 10px;
@@ -187,6 +191,7 @@ body {
 }
 
 .hero-section{
+  width: 100%;
   display: flex;
   flex-direction: column;
   margin-bottom: 100px;
@@ -197,7 +202,7 @@ body {
   margin-left: 10%;
   display: flex;
   justify-content: center; 
-  align-items: center; 
+  align-self: flex-end; 
   height:60px; 
   top: 200px;
   position: relative;
@@ -212,6 +217,45 @@ body {
 }
 
 
+@media (max-width: 768px) {
+  .banner h1,
+  .banner p,
+  .hero-section .logo-container
+  {
+    align-self: center;
+    margin-left: 0;
+  }
+  .banner h1{
+    font-size: 55px;
+  }
+  .banner p{
+    font-size: 20px;
+    
+  }
+  
+}
+@media (max-width: 678px) {
+  
+  .banner h1{
+    font-size: 45px;
+  }
+  .banner p{
+    font-size: 15px;
+    
+  }
+  
+}
+
+@media (max-width: 576px) {
+  
+  .banner h1{
+    font-size: 40px;
+  }
+  .banner p{
+    font-size: 12px;
+    
+  }
+}
 
 
 /*---------------- استایل‌های سکشن (Section)------------------------ */
@@ -228,9 +272,7 @@ body {
 }
 
 .section div {
-  opacity: 1;
   width: 100%;
-  /* transform: translateY(30px); */
 }
 
 .section div img {
